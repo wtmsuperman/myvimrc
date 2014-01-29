@@ -67,7 +67,7 @@ Bundle 'delimitMate.vim'
 syntax on
 syntax enable
 "set background=dark
-colorscheme solarized
+colorscheme solarized 
 let w:solarized_style="dark"
 let g:solarized_termcolors=256
 
@@ -94,8 +94,7 @@ set statusline+=%2*\ %=
 set statusline+=%3*\ %{''.(&fenc!=''?&fenc:&enc).''}      "Encoding
 set statusline+=%3*\ %{(&bomb?\",BOM\":\"\")}\            "Encoding2
 set statusline+=%4*\ %{&ff}\                              "FileFormat (dos/unix..) 
-set statusline+=%5*\ %l/%L\ (%03p%%)\             "Rownumber/total (%)
-set statusline+=%6*\ col:%03c\                            "Colnr
+set statusline+=%5*\ %l/%L\             "Rownumber/total (%)
 hi User1 guifg=white  guibg=red
 hi User2 guifg=#292b00  guibg=#f4f597
 
@@ -178,3 +177,4 @@ set statusline+=%*
 highlight SyntasticErrorSign guifg=white guibg=red
 highlight SyntasticErrorLine guibg=#2f0000
 highlight SyntasticError guibg=#2f0000
+
