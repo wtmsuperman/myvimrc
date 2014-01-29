@@ -68,7 +68,7 @@ syntax on
 syntax enable
 "set background=dark
 colorscheme solarized
-let w:solarized_style="light"
+let w:solarized_style="dark"
 let g:solarized_termcolors=256
 
 "font
@@ -87,6 +87,17 @@ set wildmenu
 "status line
 set laststatus=2 
 set ruler
+set statusline=
+set statusline+=%1*\ %<%F\ 	"File+path
+set statusline+=%2*\ %y\ 	"FileType
+set statusline+=%3*\ %{''.(&fenc!=''?&fenc:&enc).''}      "Encoding
+set statusline+=%3*\ %{(&bomb?\",BOM\":\"\")}\            "Encoding2
+set statusline+=%4*\ %{&ff}\                              "FileFormat (dos/unix..) 
+set statusline+=%5*\ %=\ %l/%L\ (%03p%%)\             "Rownumber/total (%)
+set statusline+=%6*\ col:%03c\                            "Colnr
+set statusline+=%0*\ \ %m%r%w\ %P\ \                      "Modified? Readonly? Top/bot.
+hi User1 guifg=#ffdad8  guibg=#880c0e
+hi User3 guifg=#292b00  guibg=#f4f597
 
 set history=100
 set nobackup
@@ -97,9 +108,6 @@ set cursorline
 filetype plugin indent on 
 set completeopt=longest,menu
 set tags+=tags
-if !g:iswindows
-	set tags+=~/.vim/stdc.tags
-endif
 set autochdir
 
 "indent
