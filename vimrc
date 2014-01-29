@@ -34,9 +34,11 @@ Bundle 'gmarik/vundle'
 " Bundle 'tpope/vim-rails.git'
 Bundle 'Solarized'
 Bundle 'xolox/vim-misc'
+Bundle 'clang-complete'
+Bundle 'Syntastic'
+Bundle 'Tagbar'
 
 " vim-scripts repos
-Bundle 'taglist.vim'
 Bundle 'bufexplorer.zip'
 Bundle 'The-NERD-tree'
 Bundle 'a.vim'
@@ -47,6 +49,7 @@ Bundle 'grep.vim'
 Bundle 'cscope.vim'
 Bundle 'TagHighlight'
 Bundle 'vmark.vim--Visual-Bookmarking'
+Bundle 'delimitMate.vim'
 
 " non github reposo
 " ...
@@ -153,8 +156,17 @@ let g:lua_inspect_warnings = 0
 inoremap <F6> <C-o>:LuaInspectToggle<CR>
 nnoremap <F6>      :LuaInspectToggle<CR>
 "Taglist
-inoremap <F8> <C-o>:TlistToggle<CR>
-nnoremap <F8> :TlistToggle<CR>
+inoremap <F8> <C-o>:TagbarOpenAutoClose<CR>
+nnoremap <F8> :TagbarOpenAutoClose<CR>
 "The-Nerd-Tree
 inoremap <F9> <C-o>:NERDTreeToggle<CR>
 nnoremap <F9> :NERDTreeToggle<CR>
+"clang-complete
+let g:clang_complete_copen=1
+"Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+highlight SyntasticErrorSign guifg=white guibg=red
+highlight SyntasticErrorLine guibg=#2f0000
+highlight SyntasticError guibg=#2f0000
