@@ -16,7 +16,7 @@ endif
 set nocompatible
 filetype off                  " required
 if !g:iswindows
-	set rtp+=~/.vim/bundle/vundle/
+	set rtp+=~/.vim/bundle/Vundle.vim
 	call vundle#rc()
 else
     set rtp+=$VIM/vimfiles/bundle/vundle/
@@ -27,7 +27,7 @@ endif
 "
 " let Vundle manage Vundle
 " required! 
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " My Bundles here:
 "
@@ -36,7 +36,7 @@ Plugin 'gmarik/vundle'
 " Plugin 'Lokaltog/vim-easymotion'
 " Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Plugin 'tpope/vim-rails.git'
-Plugin 'altercation/solarized'
+"Plugin 'altercation/solarized'
 Plugin 'tomasr/molokai'
 Plugin 'xolox/vim-misc'
 "Plugin 'clang-complete'
@@ -48,7 +48,7 @@ Plugin 'Tagbar'
 Plugin 'The-NERD-tree'
 Plugin 'a.vim'
 "Plugin 'minibufexpl.vim'	
-"Plugin 'luainspect.vim'
+Plugin 'luainspect.vim'
 Plugin 'ctrlp.vim'
 Plugin 'grep.vim'
 Plugin 'cscope.vim'
