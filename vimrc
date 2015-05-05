@@ -19,7 +19,7 @@ if !g:iswindows
 	set rtp+=~/.vim/bundle/Vundle.vim
 	call vundle#rc()
 else
-    set rtp+=$VIM/vimfiles/bundle/vundle/
+    set rtp+=$VIM/vimfiles/bundle/Vundle.vim
     call vundle#rc('$VIM/vimfiles/bundle/')
 endif
 
@@ -160,7 +160,7 @@ source $VIMRUNTIME/menu.vim
 
 "leader
 let mapleader='f'
-
+:set timeout timeoutlen=100
 "ctrlp
 let g:ctrlp_by_filename = 1
 let g:ctrlp_working_path_mode = "raw"
