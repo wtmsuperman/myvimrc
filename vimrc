@@ -158,6 +158,9 @@ source $VIMRUNTIME/menu.vim
 "let g:miniBufExplSplitToEdge = 1
 "let g:miniBufExplorerMoreThanOne=0
 
+"leader
+let mapleader='f'
+
 "ctrlp
 let g:ctrlp_by_filename = 1
 let g:ctrlp_working_path_mode = "raw"
@@ -170,8 +173,8 @@ let g:ctrlp_root_markers = ['myroot']
 let g:ctrlp_max_files = 10000
 let g:ctrlp_clear_cache_on_exit = 0
 nnoremap <silent><s-P> :CtrlPCmdPalette<CR>
-nnoremap <silent><c-s-r> :CtrlPFunky<CR>
-nnoremap <silent><c-s-b> :CtrlPBuffer<CR>
+nnoremap <silent><leader>r :CtrlPFunky<CR>
+nnoremap <silent><leader>b :CtrlPBuffer<CR>
 let g:ctrlp_extensions = ['funky']
 if !has('python')
 	echo 'In order to use pymatcher plugin, you need +python compiled vim'
@@ -221,3 +224,5 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
+
+nnoremap <silent><leader>q :bd<CR>
