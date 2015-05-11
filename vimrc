@@ -62,6 +62,7 @@ Plugin 'bling/vim-airline'
 Plugin 'FelikZ/ctrlp-py-matcher'
 "Plugin 'Conque-Shell'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'EasyGrep.vim'
 
 " non github reposo
 " ...
