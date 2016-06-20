@@ -48,10 +48,10 @@ Plugin 'Tagbar'
 Plugin 'The-NERD-tree'
 Plugin 'a.vim'
 "Plugin 'minibufexpl.vim'	
-Plugin 'luainspect.vim'
+"Plugin 'luainspect.vim'
 Plugin 'ctrlp.vim'
 Plugin 'grep.vim'
-Plugin 'cscope.vim'
+"Plugin 'cscope.vim'
 Plugin 'TagHighlight'
 Plugin 'delimitMate.vim'
 Plugin 'Shougo/neocomplete.vim'
@@ -62,8 +62,7 @@ Plugin 'bling/vim-airline'
 Plugin 'FelikZ/ctrlp-py-matcher'
 "Plugin 'Conque-Shell'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'EasyGrep.vim'
-
+Plugin 'commentary.vim'
 " non github reposo
 " ...
 
@@ -91,12 +90,12 @@ colorscheme molokai
 "let g:solarized_termcolors=256
 
 "font
-set guifont=Hermit:h14
-set guifontwide=幼圆:h14
+set guifont=Hermit:h18
+"set guifontwide=幼圆:h18
 
 "size
-set lines=20
-set columns=70
+set lines=40
+set columns=150
 
 "cmd
 set showcmd
@@ -161,7 +160,7 @@ source $VIMRUNTIME/menu.vim
 
 "leader
 let mapleader='f'
-:set timeout timeoutlen=100
+:set timeout timeoutlen=500
 "ctrlp
 let g:ctrlp_by_filename = 1
 let g:ctrlp_working_path_mode = "raw"
@@ -194,6 +193,7 @@ nnoremap <F8> :TagbarOpenAutoClose<CR>
 "The-Nerd-Tree
 inoremap <F9> <C-o>:NERDTreeTabsToggle<CR>
 nnoremap <F9> :NERDTreeTabsToggle<CR>
+let g:nerdtree_tabs_open_on_gui_startup=0
 "clang-complete
 "let g:clang_complete_copen=1
 "Syntastic
@@ -205,7 +205,7 @@ highlight SyntasticErrorLine guibg=#2f0000
 highlight SyntasticError guibg=#2f0000
 
 "air line
-let g:airline_theme='badwolf'
+"let g:airline_theme='badwolf'
 let g:airline#extensions#tabline#enabled = 1
 nnoremap <silent><c-tab> :bn<CR>
 nnoremap <silent><c-s-tab> :bp<CR>
@@ -227,3 +227,8 @@ let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 
 nnoremap <silent><leader>q :bd<CR>
+
+nnoremap <silent><leader>x :simalt ~x<CR>
+
+"neocomplete
+let g:neocomplete#enable_at_startup = 1
